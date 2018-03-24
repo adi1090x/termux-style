@@ -12,7 +12,7 @@ This Setup Contains-
 First, clone this repository by typing...
 
 ```sh
-$ git https://github.com/adi1090x/termux-style.git
+$ git clone https://github.com/adi1090x/termux-style.git
 ```
 
 And Then, type...
