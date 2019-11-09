@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-## Author : Aditya Shakya
-## Email  : adi1090x@gmail.com
+## Author : Dr. Xyber Eagle
+## Email  : Drxybereagle@gmail.com
 
 #colors
 R='\033[1;31m'
@@ -19,7 +19,7 @@ echo -e $B"   │$R╺┳╸┏━╸┏━┓┏┳┓╻ ╻╻ ╻   $G┏━
 echo -e $B"   │$R ┃ ┣╸ ┣┳┛┃┃┃┃ ┃┏╋┛$Y╺━╸$G┗━┓ ┃ ┗┳┛┃  ┣╸ $B│"
 echo -e $B"   │$R ╹ ┗━╸╹┗╸╹ ╹┗━┛╹ ╹   $G┗━┛ ╹  ╹ ┗━╸┗━╸$B│"
 echo -e $B"   └────────────────────────────────────┘"
-echo -e $B"   [$R*$B] By-$Y Aditya Shakya $R//$Y adi1090x"
+echo -e $B"   [$R*$B] By-$Y Dr. Xyber Eagle $R//$Y adi1090x"
 echo
 
 echo -e $G"   [*] Installing termux-style..."
