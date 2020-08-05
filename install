@@ -58,7 +58,7 @@ prerequisite() {
 	if [[ (-f $PREFIX/bin/wget) && (-f $PREFIX/bin/tput) ]]; then
 		{ echo "    ${BLUE}[${RED}*${BLUE}] ${GREEN}Dependencies are already Installed!"; }
 	else
-		{ echo ${CYAN}; pkg update -y; pkg install -y wget ncurses-utils; }
+		{ pkg update -y; pkg install -y wget ncurses-utils; }
 		(type -p wget tput &> /dev/null) && { echo; echo "    ${BLUE}[${RED}*${BLUE}] ${GREEN}Dependencies are succesfully installed!"; } || { echo; echo "    ${BLUE}[${RED}!${BLUE}] ${RED}Error Occured, failed to install dependencies."; echo; reset_color; exit 1; }
 	fi
 }
@@ -71,13 +71,11 @@ install_tstyle () {
 		echo "    ${BLUE}[${RED}*${BLUE}] ${RED}Deleting files from previous installation..."${BLUE}
 		{ rm -r $PREFIX/bin/termux-style $PREFIX/share/termux-style; echo; }
 	fi
-	# backup user config
-	if [[ -d $TERMUX_DIR ]]; then
-		mv $TERMUX_DIR{,.backup}
-	fi
 	# termux config dir
 	if [[ ! -d $TERMUX_DIR ]]; then
 		mkdir $TERMUX_DIR
+	else
+		cp -r $TERMUX_DIR{,.backup}
 	fi
 	# Coping files
 	{ echo "    ${BLUE}[${RED}*${BLUE}] ${ORANGE}Coping files in ${GREEN}$PREFIX/share ${ORANGE}directory..."${BLUE}; }
