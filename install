@@ -54,29 +54,12 @@ reset_color() {
 
 ## Prerequisite
 prerequisite() {
-    dependencies=(wget tput)
-    for dependency in "${dependencies[@]}"; do
-        type -p "$dependency" &>/dev/null || {
-			banner
-            { echo; echo "    ${BLUE}[${RED}!${BLUE}] ${RED}ERROR: Could not find ${MAGENTA}'${dependency}'${RED}, is it installed?" >&2; echo; }
-            { reset_color; exit 1; }
-        }
-    done
-}
-
-## Check for previous installation
-check_prev () {
-	banner
-	if [[ (-L $PREFIX/bin/termux-style) && (-d $PREFIX/share/termux-style) ]]; then
-		{ echo; echo "    ${BLUE}[${RED}!${BLUE}] ${MAGENTA}termux-style ${GREEN}is already installed."; }
-		{ read -p "    ${BLUE}[${RED}?${BLUE}] ${ORANGE}Do you wanna re-install it? (y/n): ${GREEN}"; echo; }
-		if [[ "$REPLY" =~ ^[y/Y]$ ]]; then
-			install_tstyle
-		else
-			{ reset_color; exit; }
-		fi
+	{ echo; echo "    ${BLUE}[${RED}*${BLUE}] ${ORANGE}Installing Dependencies..."${CYAN}; echo; }
+	if [[ (-f $PREFIX/bin/wget) && (-f $PREFIX/bin/tput) ]]; then
+		{ echo "    ${BLUE}[${RED}*${BLUE}] ${GREEN}Dependencies are already Installed!"; }
 	else
-		{ echo; install_tstyle; }
+		{ echo ${CYAN}; pkg update -y; pkg install -y wget ncurses-utils; }
+		(type -p wget tput &> /dev/null) && { echo; echo "    ${BLUE}[${RED}*${BLUE}] ${GREEN}Dependencies are succesfully installed!"; } || { echo; echo "    ${BLUE}[${RED}!${BLUE}] ${RED}Error Occured, failed to install dependencies."; echo; reset_color; exit 1; }
 	fi
 }
 
@@ -113,8 +96,20 @@ install_tstyle () {
 
 ## Main
 main () {
+	banner
 	prerequisite
-	check_prev
+	# Check for previous installation
+	if [[ (-L $PREFIX/bin/termux-style) && (-d $PREFIX/share/termux-style) ]]; then
+		{ echo; echo "    ${BLUE}[${RED}!${BLUE}] ${MAGENTA}termux-style ${GREEN}is already installed."; }
+		{ read -p "    ${BLUE}[${RED}?${BLUE}] ${ORANGE}Do you wanna re-install it? (y/n): ${GREEN}"; echo; }
+		if [[ "$REPLY" =~ ^[y/Y]$ ]]; then
+			install_tstyle
+		else
+			{ reset_color; exit; }
+		fi
+	else
+		{ echo; install_tstyle; }
+	fi
 }
 
 main
