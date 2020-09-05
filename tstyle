@@ -29,7 +29,7 @@ banner () {
     ${BLUE}│${RED}░░█░░█▀▀░█▀▄░█░█░█░█░▄▀▄${ORANGE}░▄▄▄${RED}░${GREEN}▀▀█░░█░░░█░░█░░░█▀▀░░${BLUE}│
     ${BLUE}│${RED}░░▀░░▀▀▀░▀░▀░▀░▀░▀▀▀░▀░▀${ORANGE}░░░░░${GREEN}▀▀▀░░▀░░░▀░░▀▀▀░▀▀▀░░${BLUE}│
     ${BLUE}└──────────────────────────────────────────────────┘
-    ${BLUE}[${RED}*${BLUE}] ${ORANGE}By- Aditya Shakya ${RED}//${ORANGE} adi1090x"
+    ${BLUE}[${RED}*${BLUE}] ${ORANGE} ${RED}//${ORANGE} 
 }
 
 ## Script Termination
@@ -167,23 +167,7 @@ import_files () {
 
 ## About program
 about_program () {
-    echo -n ${BLUE}"    ┌───────────────────────────────────────────────────────────────┐
-    │  			     ┏━┓┏┓ ┏━┓╻ ╻╺┳╸			    │
-    │  			     ┣━┫┣┻┓┃ ┃┃ ┃ ┃ 			    │
-    │  			     ╹ ╹┗━┛┗━┛┗━┛ ╹ 			    │
-    │───────────────────────────────────────────────────────────────│
-    │                                                               │
-    │ >>  'termux-style' is a simple program that provides color    │
-    │     schemes and powerline-ready fonts to customize the        │
-    │     appearance of the termux terminal emulator.               │
-    │                                                               │
-    │                                                               │
-    │ >>  Author   :  Aditya Shakya                                 │
-    │     Twitter  :  https://twitter.com/adi1090x                  │
-    │     Github   :  https://github.com/adi1090x                   │
-    │     Reddit   :  https://www.reddit.com/user/adi1090x          │
-    │                                                               │
-    └───────────────────────────────────────────────────────────────┘"
+    echo -n ${BLUE}"    ───────────────────────
     { echo; read -p "    ${BLUE}[${RED}*${BLUE}] ${GREEN}Press ${GREENBG}${BLACK} Enter ${DEFAULT_BG}${GREEN} To Return To Main Menu."; }
 }
 
