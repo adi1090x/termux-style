@@ -1,7 +1,7 @@
 <!-- Links -->
 [bmac]: https://www.buymeacoffee.com/adi1090x
 [ko-fi]: https://ko-fi.com/adi1090x
-[paypal]: https://www.paypal.me/adi1090x
+[paypal]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=U3VK2SSVQWAPN
 [patreon]: https://www.patreon.com/adi1090x
 
 # Termux Style
