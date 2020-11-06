@@ -1,0 +1,154 @@
+input keyevent BACK
+
+var=1
+x=1
+
+
+temp="dummy
+    [1]base16-3024-dark
+    [2]base16-3024-light
+    [3]base16-apathy-dark
+    [4]base16-apathy-light
+    [5]base16-ashes-dark
+    [6]base16-ashes-light
+    [7]base16-atelierdune-dark
+    [8]base16-atelierdune-light
+    [9]base16-atelierforest-dark
+    [10]base16-atelierforest-light
+    [11]base16-atelierheath-dark
+    [12]base16-atelierheath-light
+    [13]base16-atelierlakeside-dark
+    [14]base16-atelierlakeside-light
+    [15]base16-atelierseaside-dark
+    [16]base16-atelierseaside-light
+    [17]base16-bespin-dark
+    [18]base16-bespin-light
+    [19]base16-brewer-dark
+    [20]base16-brewer-light
+    [21]base16-bright-dark
+    [22]base16-bright-light
+    [23]base16-chalk-dark
+    [24]base16-chalk-light
+    [25]base16-codeschool-dark
+    [26]base16-codeschool-light
+    [27]base16-colors-dark
+    [28]base16-colors-light
+    [29]base16-default-dark
+    [30]base16-default-light
+    [31]base16-eighties-dark
+    [32]base16-eighties-light
+    [33]base16-embers-dark
+    [34]base16-embers-light
+    [35]base16-flat-dark
+    [36]base16-flat-light
+    [37]base16-google-dark
+    [38]base16-google-light
+    [39]base16-grayscale-dark
+    [40]base16-grayscale-light
+    [41]base16-greenscreen-dark
+    [42]base16-greenscreen-light
+    [43]base16-harmonic16-dark
+    [44]base16-harmonic16-light
+    [45]base16-isotope-dark
+    [46]base16-isotope-light
+    [47]base16-londontube-dark
+    [48]base16-londontube-light
+    [49]base16-marrakesh-dark
+    [50]base16-marrakesh-light
+    [51]base16-materia
+    [52]base16-mocha-dark
+    [53]base16-mocha-light
+    [54]base16-monokai-dark
+    [55]base16-monokai-light
+    [56]base16-ocean-dark
+    [57]base16-ocean-light
+    [58]base16-paraiso-dark
+    [59]base16-paraiso-light
+    [60]base16-railscasts-dark
+    [61]base16-railscasts-light
+    [62]base16-shapeshifter-dark
+    [63]base16-shapeshifter-light
+    [64]base16-solarized-dark
+    [65]base16-solarized-light
+    [66]base16-summerfruit-dark
+    [67]base16-summerfruit-light
+    [68]base16-tomorrow-dark
+    [69]base16-tomorrow-light
+    [70]base16-twilight-dark
+    [71]base16-twilight-light
+    [72]black-on-white
+    [73]dracula
+    [74]gnometerm
+    [75]gotham
+    [76]gruvbox-dark
+    [77]gruvbox-light
+    [78]material
+    [79]nancy
+    [80]neon
+    [81]nord
+    [82]rydgel
+    [83]smyck
+    [84]solarized-dark
+    [85]solarized-light
+    [86]tomorrow-night
+    [87]white-on-black
+    [88]wild-cherry
+    [89]zenburn"
+array=($temp)
+#echo ${array[0]}
+#echo ${array[1]}
+#echo ${array[2]}
+#echo ${array[3]}
+#echo ${array[4]}
+#echo ${array[5]}
+
+#while start break
+
+while [ $x -le 89 ]
+do
+
+# do commands break
+
+  termux-style <<!
+c
+$var
+!
+
+#next command break
+
+termux-style <<!
+q
+!
+
+#next command break
+
+echo
+echo
+echo THIS IS ${array[$var]}
+echo THIS IS ${array[$var]}
+echo TEXTS WILL LOOK LIKE THIS
+echo TEXTS WILL LOOK LIKE THIS
+echo TEXTS WILL LOOK LIKE THIS
+echo
+echo
+
+#next command break
+
+#echo "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, ‘and what is the use of a book,’ thought Alice, ‘without pictures or conversation?"
+
+#next command break
+
+/data/data/com.termux/files/usr/bin/ls /data/data/com.termux/files/home/foldera/
+
+#next command break
+
+mkdir -p /sdcard/PTSP
+screencap /sdcard/PTSP/${array[$var]}.png
+
+#next command break
+
+  x=$(( $x + 1 ))
+  var=$(( $var + 1 ))
+  
+ 
+done
