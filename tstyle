@@ -96,6 +96,12 @@ apply_colors () {
         scheme=${color_schemes[(( answer - 1 ))]}
         echo "    ${BLUE}[${RED}*${BLUE}] ${ORANGE}Applying Color Scheme..."
         cp $COLORS_DIR/$scheme $TERMUX_DIR/colors.properties
+        if [[ ! -f "$TERMUX_DIR/.current_color" ]]; then
+			touch "$TERMUX_DIR/.current_color"
+			echo "$scheme" > "$TERMUX_DIR/.current_color"
+        else
+			echo "$scheme" > "$TERMUX_DIR/.current_color"
+        fi
         { reload_settings; reset_color; exit; }
     else
         echo -n "    ${BLUE}[${RED}!${BLUE}] ${RED}Invalid Option, Try Again."
@@ -124,6 +130,12 @@ apply_fonts () {
         font_ttf=${fonts_list[(( answer - 1 ))]}
         echo "    ${BLUE}[${RED}*${BLUE}] ${ORANGE}Applying Fonts..."
         cp $FONTS_DIR/$font_ttf $TERMUX_DIR/font.ttf
+        if [[ ! -f "$TERMUX_DIR/.current_font" ]]; then
+			touch "$TERMUX_DIR/.current_font"
+			echo "$font_ttf" > "$TERMUX_DIR/.current_font"
+        else
+			echo "$font_ttf" > "$TERMUX_DIR/.current_font"
+        fi
         { reload_settings; reset_color; exit; }
     else
         echo -n "    ${BLUE}[${RED}!${BLUE}] ${RED}Invalid Option, Try Again."
@@ -137,6 +149,12 @@ random_style () {
     echo "    ${BLUE}[${RED}*${BLUE}] ${ORANGE}Setting Random Style..."
     random_scheme=$(ls $COLORS_DIR | shuf -n 1)
     { cp $COLORS_DIR/$random_scheme $TERMUX_DIR/colors.properties; }
+    if [[ ! -f "$TERMUX_DIR/.current_color" ]]; then
+		touch "$TERMUX_DIR/.current_color"
+		echo "$random_scheme" > "$TERMUX_DIR/.current_color"
+    else
+		echo "$random_scheme" > "$TERMUX_DIR/.current_color"
+    fi
     { reload_settings; reset_color; exit; }
 }
 
@@ -189,10 +207,12 @@ about_program () {
 
 ## Main menu
 until [[ "$REPLY" =~ ^[q/Q]$ ]]; do
+	active_color=`cat $TERMUX_DIR/.current_color`
+	active_font=`cat $TERMUX_DIR/.current_font`
     banner
     echo "
-    ${BLUE}[${RED}C${BLUE}] ${GREEN}Colors ($total_colors)
-    ${BLUE}[${RED}F${BLUE}] ${GREEN}Fonts ($total_fonts)
+    ${BLUE}[${RED}C${BLUE}] ${GREEN}Colors ($total_colors) (${CYAN}${active_color%.*}${GREEN})
+    ${BLUE}[${RED}F${BLUE}] ${GREEN}Fonts ($total_fonts) (${CYAN}${active_font%.*}${GREEN})
     ${BLUE}[${RED}R${BLUE}] ${GREEN}Random
     ${BLUE}[${RED}I${BLUE}] ${GREEN}Import
     ${BLUE}[${RED}A${BLUE}] ${GREEN}About
