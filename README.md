@@ -14,15 +14,6 @@
   <img src="https://img.shields.io/github/issues/adi1090x/termux-style?color=violet&style=for-the-badge">
 </p>
 
-[<img align="left" alt="adi1090x | Twitter" width="48px" src="https://raw.githubusercontent.com/adi1090x/files/master/other/1.png" />][bmac]
-[<img align="left" alt="adi1090x | Reddit" width="48px" src="https://raw.githubusercontent.com/adi1090x/files/master/other/2.png" />][ko-fi]
-[<img align="left" alt="adi1090x | Github" width="48px" src="https://raw.githubusercontent.com/adi1090x/files/master/other/3.png" />][paypal]
-[<img align="left" alt="adi1090x | Instagram" width="48px" src="https://raw.githubusercontent.com/adi1090x/files/master/other/4.png" />][patreon]
-
-<br />
-<br />
-<br />
-
 Simple script to change color-schemes and fonts for [Termux](https://termux.com) terminal emulator.
 
 ![gif](images/main.gif) <br />
