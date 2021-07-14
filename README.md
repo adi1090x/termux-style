@@ -25,19 +25,19 @@ Simple script to change color-schemes and fonts for [Termux](https://termux.com)
 Follow the steps below - 
 
 ```bash
-# go to home dir - 
+# Go to home dir - 
 cd $HOME
 
-# clone this repository - 
+# Clone this repository (use `gh repo clone adi1090x/termux-style` if you want to use the GitHub CLI)- 
 git clone https://github.com/adi1090x/termux-style
 
-# change to termux-style dir -
+# Change to termux-style dir -
 cd termux-style
 
-# to install it, run -
+# To install it, run -
 ./install
 
-# And Follow the steps, it'll be installed on your system.
+# And follow the steps, it'll be installed on your system.
 ```
 
 ### Run
