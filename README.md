@@ -29,7 +29,7 @@ Follow the steps below -
 cd $HOME
 
 # clone this repository - 
-git clone https://github.com/adi1090x/termux-style
+git clone https://github.com/avocadeys/termux-style
 
 # change to termux-style dir -
 cd termux-style
@@ -66,8 +66,8 @@ $ termux-style
 
 ### Features
 
-+ 90 popular color-schemes.
-+ 20 powerline patched fonts.
++ 93 popular color-schemes.
++ 21 powerline patched fonts.
 + Randomly change color-schemes.
 + Import color-schemes from *local file* or *file URL*.
 + Set colors and fonts in place.
