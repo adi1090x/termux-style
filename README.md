@@ -67,7 +67,7 @@ $ termux-style
 ### Features
 
 + 93 popular color-schemes.
-+ 21 powerline patched fonts.
++ 22 powerline patched fonts.
 + Randomly change color-schemes.
 + Import color-schemes from *local file* or *file URL*.
 + Set colors and fonts in place.
